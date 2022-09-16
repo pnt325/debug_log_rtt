@@ -13,9 +13,9 @@
 										SEGGER_RTT_printf(0, RTT_CTRL_CLEAR)
 #define debug_log(__c, ...)             SEGGER_RTT_printf(0, RTT_CTRL_TEXT_BRIGHT_WHITE""__c, ##__VA_ARGS__)
 #define debug_logln()                   SEGGER_RTT_printf(0, "\r\n");
-#define debug_logi(_tag, __c, ...)      SEGGER_RTT_printf(0, RTT_CTRL_TEXT_BRIGHT_WHITE"I:["_tag"] "__c"\r\n", ##__VA_ARGS__)
-#define debug_loge(_tag, __c, ...)      SEGGER_RTT_printf(0, RTT_CTRL_TEXT_BRIGHT_RED"E:["_tag"] "__c"\r\n", ##__VA_ARGS__)
-#define debug_logw(_tag, __c, ...)      SEGGER_RTT_printf(0, RTT_CTRL_TEXT_YELLOW"W:["_tag"] "__c"\r\n", ##__VA_ARGS__)
+#define debug_logi(_tag, __c, ...)      SEGGER_RTT_printf(0, RTT_CTRL_TEXT_BRIGHT_WHITE"I:[%s] "__c"\r\n",_tag, ##__VA_ARGS__)
+#define debug_loge(_tag, __c, ...)      SEGGER_RTT_printf(0, RTT_CTRL_TEXT_BRIGHT_RED"E:[%s] "__c"\r\n", _tag, ##__VA_ARGS__)
+#define debug_logw(_tag, __c, ...)      SEGGER_RTT_printf(0, RTT_CTRL_TEXT_YELLOW"W:[%s] "__c"\r\n", _tag, ##__VA_ARGS__)
 
 #else 
 
