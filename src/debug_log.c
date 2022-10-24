@@ -24,3 +24,10 @@ void __debug_assert(const char* _f, int _l)
 	}
 }
 #endif
+
+#ifdef USE_DEBUG_LOG
+__atrribute__((weak)) uint32_t __debug_log_gettick_ms(void)
+{
+	return 0;
+}
+#endif
