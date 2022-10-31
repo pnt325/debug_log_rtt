@@ -6,10 +6,7 @@
 void __debug_assert(void)
 {
 	__disable_irq();
-	while(1)
-	{
-
-	}
+	while(1);
 }
 #endif
 
@@ -18,14 +15,11 @@ void __debug_assert(const char* _f, int _l)
 {
 	debug_loge("Assert", "%s, %d", _f, _l);
 	__disable_irq();
-	while(1)
-	{
-
-	}
+	while(1);
 }
 #endif
 
-#ifdef USE_DEBUG_LOG
+#ifdef USE_DEBUG_LOG_TIMESTAMP
 __atrribute__((weak)) uint32_t __debug_log_gettick_ms(void)
 {
 	return 0;
